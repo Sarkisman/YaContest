@@ -35,24 +35,6 @@ YES
 3 */
 
 
-// вариант со стандартным вводом:
-// function isTriangle(str) {
-//   const [a, b, c] = str
-//     .toString()
-//     .split(' ')
-//     .map((el) => Number(el));
-
-//   return a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a
-//     ? true
-//     : false;
-// }
-
-// process.stdin.on('data', (data) => {
-//   let result = isTriangle(data);
-//   process.stdout.write(result.toString());
-//   process.exit();
-// });
-
 // вариант с записью в файл
 const fs = require('fs');
 
