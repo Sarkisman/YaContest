@@ -43,7 +43,7 @@
 // Во втором примере кондиционер находится в режиме охлаждения. Поскольку температура в комнате ниже, чем желаемая, кондиционер самостоятельно выключается и температура в комнате не поменяется.
 
 
-const fs = require('fs');
+// const fs = require('fs');
 
 function conditioner(data) {
   const settings = data.toString().trim().split('\n');
@@ -74,3 +74,32 @@ fs.readFile('input.txt', 'utf8', (err, data) => {
     }
   });
 });
+// function conditioner(troom, tcond, mode) {
+//   if (mode === 'fan') {
+//     return troom;
+//   } else if (mode === 'auto') {
+//     return tcond;
+//   } else if (mode === 'heat') {
+//     return troom > tcond ? troom : tcond;
+//   } else if (mode === 'freeze') {
+//     return troom > tcond ? tcond : troom;
+//   }
+// }
+
+// process.stdin.setEncoding('utf8');
+
+// let tr, tc, md;
+// let inputLines = [];
+
+// process.stdin.on('data', (data) => {
+//   inputLines.push(data.trim());
+
+//   if (inputLines.length === 2) {
+//     [tr, tc] = inputLines[0].split(' ').map(Number);
+//     md = inputLines[1];
+
+//     let result = conditioner(tr, tc, md);
+//     process.stdout.write(result + '\n');
+//     process.exit();
+//   }
+// });
