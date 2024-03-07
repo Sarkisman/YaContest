@@ -68,8 +68,11 @@ function calculateGoalsToWin(input) {
   if (totalGoalsTeam1 > totalGoalsTeam2) {
     return 0;
   } else if (totalGoalsTeam1 === totalGoalsTeam2) {
-    if (awayGoalsTeam1 >= awayGoalsTeam2) {
-      goalsToWin = 1;
+    if (awayGoalsTeam1 > awayGoalsTeam2) {
+      return 0;
+    }
+    if (awayGoalsTeam1 === awayGoalsTeam2) {
+      return 1;
     } else if (awayGoalsTeam1 < awayGoalsTeam2) {
       goalsToWin = totalGoalsTeam2 - totalGoalsTeam1 + 1;
     }
@@ -80,7 +83,7 @@ function calculateGoalsToWin(input) {
       if (firstMatchLocation === '1') {
         goalsToWin = totalGoalsTeam2 - totalGoalsTeam1;
       } else {
-        goalsToWin = totalGoalsTeam2 - totalGoalsTeam1+1;
+        goalsToWin = totalGoalsTeam2 - totalGoalsTeam1 + 1;
       }
     }
   }
